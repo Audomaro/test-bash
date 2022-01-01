@@ -1,7 +1,7 @@
 #!/bin/bash
 
 HC() {
-    cmd="GIT_COMMITTER_DATE='$1' git commit --amend --date='$1' --no-edit"
+    cmd="GIT_COMMITTER_DATE='$1' git commit --amend --no-edit --date='$1'"
 
     if
         [ -z "$1" ]
@@ -13,4 +13,4 @@ HC() {
     eval $cmd
 }
 
-HC "2000.01.01T00:00:00"
+HC "1900.01.01T00:00:00"
