@@ -9,6 +9,7 @@ HC() {
         cmd="echo ""Se requiere la fecha para el commit"""
     fi
 
+    echo $cmd
     eval $cmd
 }
 
