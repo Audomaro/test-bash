@@ -9,7 +9,18 @@ HC() {
         cmd="echo ""Se requiere la fecha para el commit"""
     fi
 
-    echo $cmd
+    eval $cmd
+}
+
+HCE() {
+    cmd="GIT_COMMITTER_DATE='$1' git commit --amend --date='$1'"
+
+    if
+        [ -z "$1" ]
+    then
+        cmd="echo ""Se requiere la fecha para el commit"""
+    fi
+
     eval $cmd
 }
 
